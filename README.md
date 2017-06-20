@@ -1,4 +1,4 @@
-# Set of base exceptions
+# Set of the base exceptions
 
 [![Software License][ico-license]][link-license]
 [![Latest Version on Packagist][ico-version]][link-packagist]

@@ -1,6 +1,6 @@
 {
   "name": "zee/exceptions",
-  "description": "The set of the base exceptions",
+  "description": "Set of the base exceptions",
   "license": "BSD-2-Clause",
   "keywords": [
     "exceptions",

@@ -3,11 +3,8 @@
 [![Software License][ico-license]][link-license]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Build Status][ico-travis]][link-travis]
-<!--
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
--->
-
 
 This repository contains a set of useful exception classes.
 

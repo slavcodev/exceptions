@@ -22,38 +22,41 @@ class ReadExceptionContextTest extends TestCase
      * @test
      * @dataProvider provideExceptionClasses
      *
-     * @param Exceptions\Throwable $exception
-     * @param string $message
-     * @param array $context
-     * @param int $code
+     * @param string $exceptionClass
      */
-    public function exceptionObjectShouldContainContext(Exceptions\Throwable $exception, string $message, array $context, int $code)
-    {
-        self::assertSame($message, $exception->getMessage());
-        self::assertSame($context, $exception->getContext());
-        self::assertSame($code, $exception->getCode());
-    }
-
-    public function provideExceptionClasses()
+    public function exceptionObjectShouldContainContext(string $exceptionClass)
     {
         $message = 'Something went wrong';
         $code = PHP_INT_MAX;
         $context = ['foo' => 'bar'];
+        
+        $exception = new $exceptionClass($message, $context, $code);
+        
+        if ($exception instanceof Exceptions\Throwable) {
+            self::assertSame($message, $exception->getMessage());
+            self::assertSame($context, $exception->getContext());
+            self::assertSame($code, $exception->getCode());
+        } else {
+            self::fail('Invalid exception class');
+        }
+    }
 
+    public function provideExceptionClasses()
+    {
         return [
-            [new Exceptions\LogicException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\BadFunctionCallException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\BadMethodCallException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\DomainException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\InvalidArgumentException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\LengthException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\OutOfRangeException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\RuntimeException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\OutOfBoundsException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\OverflowException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\RangeException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\UnderflowException($message, $context, $code), $message, $context, $code],
-            [new Exceptions\UnexpectedValueException($message, $context, $code), $message, $context, $code],
+            [Exceptions\LogicException::class],
+            [Exceptions\BadFunctionCallException::class],
+            [Exceptions\BadMethodCallException::class],
+            [Exceptions\DomainException::class],
+            [Exceptions\InvalidArgumentException::class],
+            [Exceptions\LengthException::class],
+            [Exceptions\OutOfRangeException::class],
+            [Exceptions\RuntimeException::class],
+            [Exceptions\OutOfBoundsException::class],
+            [Exceptions\OverflowException::class],
+            [Exceptions\RangeException::class],
+            [Exceptions\UnderflowException::class],
+            [Exceptions\UnexpectedValueException::class],
         ];
     }
 }

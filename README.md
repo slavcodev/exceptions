@@ -13,7 +13,7 @@ because often the message and the code are not enough to debug.
 
 ## Install
 
-Via [Composer](https://getcomposer.org)
+Using [Composer](https://getcomposer.org):
 
 ```bash
 composer require z-ee/exceptions
@@ -21,7 +21,45 @@ composer require z-ee/exceptions
 
 ## Usage
 
-*TBD*
+Throw exceptions as usual, but you are able also to add context values:
+
+~~~php
+throw new InvalidArgumentException('Something went wrong', [
+    'key' => 'velue',
+]);
+~~~
+
+Now you can handle this exception, i.q. your error handler may log error details:
+
+~~~php
+class ErrorHandler
+{
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
+
+    /**
+     * @param LoggerInterface $logger
+     */
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+    /**
+     * @param Exception $exception
+     */
+    public function handleException(Exception $exception)
+    {
+        if ($exception instanceof Zee\Exceptions\Throwable) {
+            $this->logger->error($exception->getMessage(), $exception->getContext());
+        } else {
+            $this->logger->error($exception->getMessage());
+        }
+    }
+}
+~~~
 
 ## Testing
 
@@ -33,6 +71,10 @@ composer install
 # run the test (from project root)
 phpunit
 ```
+
+## Contributing
+
+Contributions are welcome and will be fully credited. Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for details.
 
 ## Credits
 

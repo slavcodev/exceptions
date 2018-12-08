@@ -69,7 +69,7 @@ Contributions are welcome and will be fully credited. Please see [CONTRIBUTING](
 
 ## License
 
-The BSD 2-Clause License. Please see [LICENSE][link-license] for more information.
+It's [BSD 2-Clause][link-license].
 
 [ico-version]: https://img.shields.io/packagist/v/zeeproject/exceptions.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/License-BSD%202--Clause-blue.svg?style=flat-square

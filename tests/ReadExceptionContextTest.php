@@ -14,7 +14,7 @@ class ReadExceptionContextTest extends TestCase
      * @test
      * @dataProvider provideExceptionClasses
      */
-    public function exceptionObjectShouldContainContext(string $exceptionClass)
+    public function exceptionObjectShouldContainContext(string $exceptionClass): void
     {
         $message = 'Something went wrong';
         $code = PHP_INT_MAX;
@@ -31,7 +31,7 @@ class ReadExceptionContextTest extends TestCase
         }
     }
 
-    public function provideExceptionClasses()
+    public function provideExceptionClasses(): array
     {
         return [
             [Exceptions\LogicException::class],

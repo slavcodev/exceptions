@@ -29,27 +29,18 @@ throw new InvalidArgumentException('Something went wrong', [
 ]);
 ~~~
 
-Now you can handle this exception, i.q. your error handler may log error details:
+Now you can handle this exception, e.q. your error handler may log error details:
 
 ~~~php
-class ErrorHandler
+final class ErrorHandler
 {
-    /**
-     * @var LoggerInterface
-     */
     private $logger;
 
-    /**
-     * @param LoggerInterface $logger
-     */
-    public function __construct(LoggerInterface $logger)
+    public function __construct(Psr\Log\LoggerInterface $logger)
     {
         $this->logger = $logger;
     }
 
-    /**
-     * @param Exception $exception
-     */
     public function handleException(Exception $exception)
     {
         if ($exception instanceof Zee\Exceptions\Throwable) {
@@ -64,11 +55,6 @@ class ErrorHandler
 ## Testing
 
 ```bash
-# install required files
-composer self-update
-composer install
-
-# run the test (from project root)
 phpunit
 ```
 

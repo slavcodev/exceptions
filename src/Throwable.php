@@ -5,12 +5,10 @@
 
 namespace Zee\Exceptions;
 
-use Throwable as BaseThrowable;
-
 /**
  * Marker interface for exceptions with context information.
  */
-interface Throwable extends BaseThrowable
+interface Throwable extends \Throwable
 {
     public function getContext() : array;
 }

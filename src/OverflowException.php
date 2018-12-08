@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use OverflowException as BaseException;
-
-class OverflowException extends BaseException implements Throwable
+class OverflowException extends \OverflowException implements Throwable
 {
     use ThrowableContextTrait;
 }

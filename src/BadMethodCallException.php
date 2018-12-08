@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use BadMethodCallException as BaseException;
-
-class BadMethodCallException extends BaseException implements Throwable
+class BadMethodCallException extends \BadMethodCallException implements Throwable
 {
     use ThrowableContextTrait;
 }

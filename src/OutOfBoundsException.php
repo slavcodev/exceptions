@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use OutOfBoundsException as BaseException;
-
-class OutOfBoundsException extends BaseException implements Throwable
+class OutOfBoundsException extends \OutOfBoundsException implements Throwable
 {
     use ThrowableContextTrait;
 }

@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use RuntimeException as BaseException;
-
-class RuntimeException extends BaseException implements Throwable
+class RuntimeException extends \RuntimeException implements Throwable
 {
     use ThrowableContextTrait;
 }

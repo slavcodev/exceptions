@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use RangeException as BaseException;
-
-class RangeException extends BaseException implements Throwable
+class RangeException extends \RangeException implements Throwable
 {
     use ThrowableContextTrait;
 }

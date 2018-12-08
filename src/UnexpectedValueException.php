@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use UnexpectedValueException as BaseException;
-
-class UnexpectedValueException extends BaseException implements Throwable
+class UnexpectedValueException extends \UnexpectedValueException implements Throwable
 {
     use ThrowableContextTrait;
 }

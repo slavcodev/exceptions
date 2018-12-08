@@ -5,9 +5,7 @@
 
 namespace Zee\Exceptions;
 
-use LogicException as BaseException;
-
-class LogicException extends BaseException implements Throwable
+class LogicException extends \LogicException implements Throwable
 {
     use ThrowableContextTrait;
 }

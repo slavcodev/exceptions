@@ -16,7 +16,7 @@ because often the message and the code are not enough to debug.
 Using [Composer](https://getcomposer.org):
 
 ```bash
-composer require z-ee/exceptions
+composer require zeeproject/exceptions
 ```
 
 ## Usage
@@ -29,27 +29,18 @@ throw new InvalidArgumentException('Something went wrong', [
 ]);
 ~~~
 
-Now you can handle this exception, i.q. your error handler may log error details:
+Now you can handle this exception, e.q. your error handler may log error details:
 
 ~~~php
-class ErrorHandler
+final class ErrorHandler
 {
-    /**
-     * @var LoggerInterface
-     */
     private $logger;
 
-    /**
-     * @param LoggerInterface $logger
-     */
-    public function __construct(LoggerInterface $logger)
+    public function __construct(Psr\Log\LoggerInterface $logger)
     {
         $this->logger = $logger;
     }
 
-    /**
-     * @param Exception $exception
-     */
     public function handleException(Exception $exception)
     {
         if ($exception instanceof Zee\Exceptions\Throwable) {
@@ -64,11 +55,6 @@ class ErrorHandler
 ## Testing
 
 ```bash
-# install required files
-composer self-update
-composer install
-
-# run the test (from project root)
 phpunit
 ```
 
@@ -83,15 +69,15 @@ Contributions are welcome and will be fully credited. Please see [CONTRIBUTING](
 
 ## License
 
-The BSD 2-Clause License. Please see [LICENSE][link-license] for more information.
+It's [BSD 2-Clause][link-license].
 
-[ico-version]: https://img.shields.io/packagist/v/z-ee/exceptions.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/zeeproject/exceptions.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/License-BSD%202--Clause-blue.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/zee/exceptions/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/zee/exceptions.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/zee/exceptions.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/z-ee/exceptions
+[link-packagist]: https://packagist.org/packages/zeeproject/exceptions
 [link-license]: LICENSE
 [link-travis]: https://travis-ci.org/zee/exceptions
 [link-scrutinizer]: https://scrutinizer-ci.com/g/zee/exceptions/code-structure

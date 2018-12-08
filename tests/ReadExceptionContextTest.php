@@ -1,11 +1,6 @@
 <?php
 /**
- * This file is part of Zee Project.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @see https://github.com/zee/
+ * {@see https://github.com/zee/ Zee Project (c)}
  */
 
 namespace Zee\Exceptions\Tests;
@@ -13,25 +8,20 @@ namespace Zee\Exceptions\Tests;
 use PHPUnit\Framework\TestCase;
 use Zee\Exceptions;
 
-/**
- * Class ReadExceptionContextTest.
- */
 class ReadExceptionContextTest extends TestCase
 {
     /**
      * @test
      * @dataProvider provideExceptionClasses
-     *
-     * @param string $exceptionClass
      */
-    public function exceptionObjectShouldContainContext(string $exceptionClass)
+    public function exceptionObjectShouldContainContext(string $exceptionClass): void
     {
         $message = 'Something went wrong';
         $code = PHP_INT_MAX;
         $context = ['foo' => 'bar'];
-        
+
         $exception = new $exceptionClass($message, $context, $code);
-        
+
         if ($exception instanceof Exceptions\Throwable) {
             self::assertSame($message, $exception->getMessage());
             self::assertSame($context, $exception->getContext());
@@ -41,7 +31,7 @@ class ReadExceptionContextTest extends TestCase
         }
     }
 
-    public function provideExceptionClasses()
+    public function provideExceptionClasses(): array
     {
         return [
             [Exceptions\LogicException::class],

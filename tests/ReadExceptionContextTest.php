@@ -1,11 +1,6 @@
 <?php
 /**
- * This file is part of Zee Project.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @see https://github.com/zee/
+ * This file is part of {@see https://github.com/zee/ Zee Project}
  */
 
 namespace Zee\Exceptions\Tests;
@@ -29,9 +24,9 @@ class ReadExceptionContextTest extends TestCase
         $message = 'Something went wrong';
         $code = PHP_INT_MAX;
         $context = ['foo' => 'bar'];
-        
+
         $exception = new $exceptionClass($message, $context, $code);
-        
+
         if ($exception instanceof Exceptions\Throwable) {
             self::assertSame($message, $exception->getMessage());
             self::assertSame($context, $exception->getContext());

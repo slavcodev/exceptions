@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of {@see https://github.com/zee/ Zee Project}
+ * {@see https://github.com/zee/ Zee Project (c)}
  */
 
 namespace Zee\Exceptions\Tests;

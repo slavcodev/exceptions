@@ -8,16 +8,11 @@ namespace Zee\Exceptions\Tests;
 use PHPUnit\Framework\TestCase;
 use Zee\Exceptions;
 
-/**
- * Class ReadExceptionContextTest.
- */
 class ReadExceptionContextTest extends TestCase
 {
     /**
      * @test
      * @dataProvider provideExceptionClasses
-     *
-     * @param string $exceptionClass
      */
     public function exceptionObjectShouldContainContext(string $exceptionClass)
     {

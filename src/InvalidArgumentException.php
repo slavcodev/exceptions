@@ -7,9 +7,6 @@ namespace Zee\Exceptions;
 
 use InvalidArgumentException as BaseException;
 
-/**
- * Class InvalidArgumentException.
- */
 class InvalidArgumentException extends BaseException implements Throwable
 {
     use ThrowableContextTrait;

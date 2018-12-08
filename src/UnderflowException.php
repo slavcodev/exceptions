@@ -7,9 +7,6 @@ namespace Zee\Exceptions;
 
 use UnderflowException as BaseException;
 
-/**
- * Class UnderflowException.
- */
 class UnderflowException extends BaseException implements Throwable
 {
     use ThrowableContextTrait;

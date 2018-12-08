@@ -12,8 +12,5 @@ use Throwable as BaseThrowable;
  */
 interface Throwable extends BaseThrowable
 {
-    /**
-     * @return array
-     */
     public function getContext() : array;
 }

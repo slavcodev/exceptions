@@ -19,13 +19,15 @@ class ReadExceptionContextTest extends TestCase
         $message = 'Something went wrong';
         $code = PHP_INT_MAX;
         $context = ['foo' => 'bar'];
+        $previous = new \Exception('Something went wrong');
 
-        $exception = new $exceptionClass($message, $context, $code);
+        $exception = new $exceptionClass($message, $context, $code, $previous);
 
         if ($exception instanceof Exceptions\InformativeException) {
             self::assertSame($message, $exception->getMessage());
             self::assertSame($context, $exception->getContext());
             self::assertSame($code, $exception->getCode());
+            self::assertSame($previous, $exception->getPrevious());
         } else {
             self::fail('Invalid exception class');
         }

@@ -25,7 +25,7 @@ Throw exceptions as usual, but you are able also to add context values:
 
 ~~~php
 throw new InvalidArgumentException('Something went wrong', [
-    'key' => 'velue',
+    'key' => 'value',
 ]);
 ~~~
 

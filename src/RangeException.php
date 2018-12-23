@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class RangeException extends \RangeException implements Throwable
+class RangeException extends \RangeException implements InformativeException
 {
     use ThrowableContextTrait;
 }

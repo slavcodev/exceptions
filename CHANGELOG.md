@@ -18,6 +18,6 @@ Security - in case of vulnerabilities.
 
 _TBD_
 
-## [0.1.0] 2018-12-08
+## [1.0.0] 2018-12-23
 
 Initial release.

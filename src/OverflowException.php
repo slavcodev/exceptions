@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class OverflowException extends \OverflowException implements Throwable
+class OverflowException extends \OverflowException implements InformativeException
 {
     use ThrowableContextTrait;
 }

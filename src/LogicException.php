@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class LogicException extends \LogicException implements Throwable
+class LogicException extends \LogicException implements InformativeException
 {
     use ThrowableContextTrait;
 }

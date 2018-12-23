@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class InvalidArgumentException extends \InvalidArgumentException implements Throwable
+class InvalidArgumentException extends \InvalidArgumentException implements InformativeException
 {
     use ThrowableContextTrait;
 }

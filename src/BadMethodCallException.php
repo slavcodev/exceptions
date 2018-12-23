@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class BadMethodCallException extends \BadMethodCallException implements Throwable
+class BadMethodCallException extends \BadMethodCallException implements InformativeException
 {
     use ThrowableContextTrait;
 }

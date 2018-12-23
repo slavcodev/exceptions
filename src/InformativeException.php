@@ -8,7 +8,7 @@ namespace Zee\Exceptions;
 /**
  * Marker interface for exceptions with context information.
  */
-interface Throwable extends \Throwable
+interface InformativeException extends \Throwable
 {
     public function getContext() : array;
 }

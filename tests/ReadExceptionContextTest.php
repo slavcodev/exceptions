@@ -22,7 +22,7 @@ class ReadExceptionContextTest extends TestCase
 
         $exception = new $exceptionClass($message, $context, $code);
 
-        if ($exception instanceof Exceptions\Throwable) {
+        if ($exception instanceof Exceptions\InformativeException) {
             self::assertSame($message, $exception->getMessage());
             self::assertSame($context, $exception->getContext());
             self::assertSame($code, $exception->getCode());

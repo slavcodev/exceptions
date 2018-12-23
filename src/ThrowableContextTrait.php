@@ -9,7 +9,7 @@ trait ThrowableContextTrait
 {
     private $context = [];
 
-    public function __construct(string $message = '', array $context = [], int $code = 0, Throwable $previous = null)
+    public function __construct(string $message = '', array $context = [], int $code = 0, InformativeException $previous = null)
     {
         parent::__construct($message, $code, $previous);
 

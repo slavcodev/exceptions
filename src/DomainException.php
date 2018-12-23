@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class DomainException extends \DomainException implements Throwable
+class DomainException extends \DomainException implements InformativeException
 {
     use ThrowableContextTrait;
 }

@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class UnderflowException extends \UnderflowException implements Throwable
+class UnderflowException extends \UnderflowException implements InformativeException
 {
     use ThrowableContextTrait;
 }

@@ -5,7 +5,7 @@
 
 namespace Zee\Exceptions;
 
-class LengthException extends \LengthException implements Throwable
+class LengthException extends \LengthException implements InformativeException
 {
     use ThrowableContextTrait;
 }

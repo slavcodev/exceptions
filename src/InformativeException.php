@@ -10,5 +10,5 @@ namespace Zee\Exceptions;
  */
 interface InformativeException extends \Throwable
 {
-    public function getContext() : array;
+    public function getContext(): array;
 }

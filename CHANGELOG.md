@@ -18,6 +18,12 @@ Security - in case of vulnerabilities.
 
 _TBD_
 
+## [1.0.1] 2018-12-27
+
+### Changed
+
+- Enable strict type mode for all classes (#7)
+
 ## [1.0.0] 2018-12-23
 
 Initial release.

@@ -1,10 +1,13 @@
 # Set of the base exceptions
 
+[![Build Status][ico-travis]][link-travis]
+[![Code Coverage][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![GitHub issues][ico-issues]][link-issues]
+
 [![Software License][ico-license]][link-license]
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![PHP Version][ico-php-version]][link-github]
 
 This repository contains a set of useful exception classes.
 
@@ -71,13 +74,17 @@ Contributions are welcome and will be fully credited. Please see [CONTRIBUTING](
 
 It's [BSD 2-Clause][link-license].
 
-[ico-version]: https://img.shields.io/packagist/v/zeeproject/exceptions.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/License-BSD%202--Clause-blue.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/zee/exceptions/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/zee/exceptions.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/zee/exceptions.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/zeeproject/exceptions.svg?style=for-the-badge&label=Latest
+[ico-php-version]: https://img.shields.io/packagist/php-v/zeeproject/exceptions.svg?style=for-the-badge
+[ico-license]: https://img.shields.io/badge/License-BSD%202--Clause-blue.svg?style=for-the-badge
+[ico-issues]: https://img.shields.io/github/issues/zee/exceptions.svg?style=for-the-badge&logo=github
+[ico-travis]: https://img.shields.io/travis/zee/exceptions.svg?style=for-the-badge&logo=travis
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/zee/exceptions.svg?style=for-the-badge&logo=scrutinizer
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/zee/exceptions.svg?style=for-the-badge&logo=scrutinizer
 
 [link-packagist]: https://packagist.org/packages/zeeproject/exceptions
+[link-github]: https://github.com/zee/exceptions
+[link-issues]: https://github.com/zee/exceptions/issues
 [link-license]: LICENSE
 [link-travis]: https://travis-ci.org/zee/exceptions
 [link-scrutinizer]: https://scrutinizer-ci.com/g/zee/exceptions/code-structure

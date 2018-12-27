@@ -63,16 +63,7 @@ phpunit
 
 ## Contributing
 
-Contributions are welcome and will be fully credited. Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for details.
-
-## Credits
-
-- [Veaceslav Medvedev](https://github.com/slavcodev)
-- [All Contributors](../../contributors)
-
-## License
-
-It's [BSD 2-Clause][link-license].
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for more details.
 
 [ico-version]: https://img.shields.io/packagist/v/zeeproject/exceptions.svg?style=for-the-badge&label=Latest
 [ico-php-version]: https://img.shields.io/packagist/php-v/zeeproject/exceptions.svg?style=for-the-badge

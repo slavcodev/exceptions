@@ -2,6 +2,7 @@
   "name": "zeeproject/exceptions",
   "description": "Set of the base exceptions",
   "license": "BSD-2-Clause",
+  "homepage": "https://github.com/zee/exceptions",
   "keywords": [
     "exceptions",
     "logging"
@@ -9,7 +10,12 @@
   "authors": [
     {
       "name": "Veaceslav Medvedev",
-      "email": "slavcopost@gmail.com"
+      "email": "slavcopost@gmail.com",
+      "homepage": "https://github.com/slavcodev"
+    },
+    {
+      "name": "All awesome contributors",
+      "homepage": "https://github.com/zee/exceptions/graphs/contributors"
     }
   ],
   "config": {
@@ -39,5 +45,10 @@
     "test": "phpunit",
     "test-coverage": "phpunit --coverage-clover build/logs/clover.xml",
     "test-show-coverage": "phpunit --coverage-clover build/logs/clover.xml --coverage-text=php://stdout"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
   }
 }
